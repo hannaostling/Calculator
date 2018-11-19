@@ -41,26 +41,26 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Label Text="0" Grid.Row="0" Grid.ColumnSpan="4" HorizontalOptions="End" VerticalOptions="End" TextColor="White" FontSize="60"/>
-            <Button Text="C" Grid.Row="1" Grid.Column="0" Style="{StaticResource darkerButton}"/>
-            <Button Text="+/-" Grid.Row="1" Grid.Column="1" Style="{StaticResource darkerButton}"/>
-            <Button Text="%" Grid.Row="1" Grid.Column="2" Style="{StaticResource darkerButton}" />
-            <Button Text="÷" Grid.Row="1" Grid.Column="3" Style="{StaticResource orangeButton}"/>
-            <Button Text="7" Grid.Row="2" Grid.Column="0" Style="{StaticResource plainButton}"/>
-            <Button Text="8" Grid.Row="2" Grid.Column="1" Style="{StaticResource plainButton}"/>
-            <Button Text="9" Grid.Row="2" Grid.Column="2" Style="{StaticResource plainButton}"/>
-            <Button Text="x" Grid.Row="2" Grid.Column="3" Style="{StaticResource orangeButton}"/>
-            <Button Text="4" Grid.Row="3" Grid.Column="0" Style="{StaticResource plainButton}"/>
-            <Button Text="5" Grid.Row="3" Grid.Column="1" Style="{StaticResource plainButton}"/>
-            <Button Text="6" Grid.Row="3" Grid.Column="2" Style="{StaticResource plainButton}"/>
-            <Button Text="-" Grid.Row="3" Grid.Column="3" Style="{StaticResource orangeButton}"/>
-            <Button Text="1" Grid.Row="4" Grid.Column="0" Style="{StaticResource plainButton}"/>
-            <Button Text="2" Grid.Row="4" Grid.Column="1" Style="{StaticResource plainButton}"/>
-            <Button Text="3" Grid.Row="4" Grid.Column="2" Style="{StaticResource plainButton}"/>
-            <Button Text="+" Grid.Row="4" Grid.Column="3" Style="{StaticResource orangeButton}"/>
-            <Button Text="0" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource plainButton}"/>
-            <Button Text="," Grid.Row="5" Grid.Column="2" Style="{StaticResource plainButton}"/>
-            <Button Text="=" Grid.Row="5" Grid.Column="3" Style="{StaticResource orangeButton}"/>
+            <Label Text="0" Grid.Row="0" Grid.ColumnSpan="4" HorizontalOptions="End" VerticalOptions="End" TextColor="White" FontSize="60" x:Name="UserOutput"/>
+            <Button Text="C" Grid.Row="1" Grid.Column="0" Style="{StaticResource darkerButton}" Clicked="ClearButton_Clicked"/>
+            <Button Text="+/-" Grid.Row="1" Grid.Column="1" Style="{StaticResource darkerButton}" Clicked="AbsButton_Clicked"/> 
+            <Button Text="%" Grid.Row="1" Grid.Column="2" Style="{StaticResource darkerButton}" Clicked="PercentButton_Clicked"/> 
+            <Button Text="÷" Grid.Row="1" Grid.Column="3" Style="{StaticResource orangeButton}" Clicked="DivideButton_Clicked"/> 
+            <Button Text="7" Grid.Row="2" Grid.Column="0" Style="{StaticResource plainButton}" Clicked="SevenButton_Clicked"/> 
+            <Button Text="8" Grid.Row="2" Grid.Column="1" Style="{StaticResource plainButton}" Clicked="EightButton_Clicked"/> 
+            <Button Text="9" Grid.Row="2" Grid.Column="2" Style="{StaticResource plainButton}" Clicked="NineButton_Clicked"/> 
+            <Button Text="x" Grid.Row="2" Grid.Column="3" Style="{StaticResource orangeButton}" Clicked="MultiplyButton_Clicked"/> 
+            <Button Text="4" Grid.Row="3" Grid.Column="0" Style="{StaticResource plainButton}" Clicked="FourButton_Clicked"/> 
+            <Button Text="5" Grid.Row="3" Grid.Column="1" Style="{StaticResource plainButton}" Clicked="FiveButton_Clicked"/> 
+            <Button Text="6" Grid.Row="3" Grid.Column="2" Style="{StaticResource plainButton}" Clicked="SixButton_Clicked"/> 
+            <Button Text="-" Grid.Row="3" Grid.Column="3" Style="{StaticResource orangeButton}" Clicked="SubtractButton_Clicked"/> 
+            <Button Text="1" Grid.Row="4" Grid.Column="0" Style="{StaticResource plainButton}" Clicked="OneButton_Clicked"/> 
+            <Button Text="2" Grid.Row="4" Grid.Column="1" Style="{StaticResource plainButton}" Clicked="TwoButton_Clicked"/> 
+            <Button Text="3" Grid.Row="4" Grid.Column="2" Style="{StaticResource plainButton}" Clicked="ThreeButton_Clicked"/> 
+            <Button Text="+" Grid.Row="4" Grid.Column="3" Style="{StaticResource orangeButton}" Clicked="AddButton_Clicked"/>
+            <Button Text="0" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource plainButton}" Clicked="ZeroButton_Clicked"/> 
+            <Button Text="," Grid.Row="5" Grid.Column="2" Style="{StaticResource plainButton}" Clicked="CommaButton_Clicked"/>
+            <Button Text="=" Grid.Row="5" Grid.Column="3" Style="{StaticResource orangeButton}" Clicked="ResultButton_Clicked"/> 
         </Grid>
     </ContentPage.Content>
 </ContentPage>
