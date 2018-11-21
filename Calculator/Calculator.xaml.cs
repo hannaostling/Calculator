@@ -14,7 +14,7 @@ namespace Calculator
 
         void ClearButton_Clicked(object sender, System.EventArgs e)
         {
-            Console.WriteLine("C");
+            UserOutput.Text = "0";
         }
 
         void AbsButton_Clicked(object sender, System.EventArgs e)

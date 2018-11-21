@@ -10,8 +10,9 @@ namespace Calculator
         public App()
         {
             InitializeComponent();
-
-            MainPage = new Calculator();
+            var calculator = new Calculator();
+            calculator.BackgroundColor = Color.FromHex("#545457");
+            MainPage = calculator;
         }
 
         protected override void OnStart()
