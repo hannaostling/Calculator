@@ -7,6 +7,9 @@ namespace Calculator
 {
     public partial class Calculator : ContentPage
     {
+
+        private String output; 
+
         public Calculator()
         {
             InitializeComponent();
@@ -14,6 +17,7 @@ namespace Calculator
 
         void ClearButton_Clicked(object sender, System.EventArgs e)
         {
+            output = "";
             UserOutput.Text = "0";
         }
 
@@ -34,17 +38,17 @@ namespace Calculator
 
         void SevenButton_Clicked(object sender, System.EventArgs e)
         {
-            Console.WriteLine("7");
+            UpdateLabel("7");
         }
 
         void EightButton_Clicked(object sender, System.EventArgs e)
         {
-            Console.WriteLine("8");
+            UpdateLabel("8");
         }
 
         void NineButton_Clicked(object sender, System.EventArgs e)
         {
-            Console.WriteLine("9");
+            UpdateLabel("9");
         }
 
         void MultiplyButton_Clicked(object sender, System.EventArgs e)
@@ -54,17 +58,17 @@ namespace Calculator
 
         void FourButton_Clicked(object sender, System.EventArgs e)
         {
-            Console.WriteLine("4");
+            UpdateLabel("4");
         }
 
         void FiveButton_Clicked(object sender, System.EventArgs e)
         {
-            Console.WriteLine("5");
+            UpdateLabel("5");
         }
 
         void SixButton_Clicked(object sender, System.EventArgs e)
         {
-            Console.WriteLine("6");
+            UpdateLabel("6");
         }
 
         void SubtractButton_Clicked(object sender, System.EventArgs e)
@@ -74,17 +78,17 @@ namespace Calculator
 
         void OneButton_Clicked(object sender, System.EventArgs e)
         {
-            Console.WriteLine("1");
+            UpdateLabel("1");
         }
 
         void TwoButton_Clicked(object sender, System.EventArgs e)
         {
-            Console.WriteLine("2");
+            UpdateLabel("2");
         }
 
         void ThreeButton_Clicked(object sender, System.EventArgs e)
         {
-            Console.WriteLine("3");
+            UpdateLabel("3");
         }
 
         void AddButton_Clicked(object sender, System.EventArgs e)
@@ -94,17 +98,30 @@ namespace Calculator
 
         void ZeroButton_Clicked(object sender, System.EventArgs e)
         {
-            Console.WriteLine("0");
+            string firstNumber = output.Substring(0, 1);
+            if (firstNumber != "0" && output.Length != 0)
+            {
+                UpdateLabel("0");
+            }
         }
 
         void CommaButton_Clicked(object sender, System.EventArgs e)
         {
-            Console.WriteLine(",");
+            if (!output.Contains(","))
+            {
+                UpdateLabel(",");
+            }
         }
 
         void ResultButton_Clicked(object sender, System.EventArgs e)
         {
             Console.WriteLine("=");
+        }
+
+        void UpdateLabel(string number)
+        {
+            output += number;
+            UserOutput.Text = output;
         }
     }
 }
